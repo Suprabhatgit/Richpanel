@@ -28,6 +28,15 @@ const nextConfig = {
       port: '',
       
     },
+    {
+      protocol: 'https',
+      hostname: 'rb.gy',
+      port: '',
+      pathname: '/p2hphi/**',
+      
+      
+      
+    }
     
 
     
