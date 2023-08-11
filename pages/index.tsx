@@ -8,6 +8,9 @@ import { Movie } from '@/Type'
 import Row from '@/components/Row'
 import { list } from 'postcss'
 import useAuth from '@/hooks/useAuth'
+import { modalState } from '@/atoms/modalAtom'
+import { useRecoilValue } from 'recoil'
+import Modal from '@/components/Modal'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -35,6 +38,7 @@ const Home=(
     trendingNow,
 }: Props)=> {
   const { loading, user } = useAuth()
+  const showModal = useRecoilValue(modalState)
   if (loading) return null
 
   return (
@@ -60,6 +64,7 @@ const Home=(
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
+      {showModal && <Modal />}
       
       </div>
   )
