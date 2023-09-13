@@ -53,6 +53,7 @@ export default function Header(){
             <BellIcon className="h-6 w-6"/>
             <Link href="/account">
             <Image
+            onClick={logout}
             src="https://rb.gy/g1pwyx"
             width={30}
             height={51}
